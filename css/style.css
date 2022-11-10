@@ -64,8 +64,13 @@ body {
   font-weight: 700;
   color: #F5F5F5;
   line-height: 100%;
-  text-align: center;
 }
+@media only screen and (max-width: 570px) {
+  .title-2 {
+    text-align: center;
+  }
+}
+
 .title-3 {
   font-size: 1.9rem;
   font-weight: 700;
@@ -334,8 +339,13 @@ body {
 }
 .banner-text__text {
   margin-bottom: 4rem;
-  text-align: center;
 }
+@media only screen and (max-width: 570px) {
+  .banner-text__text {
+    text-align: center;
+  }
+}
+
 .sidebar {
   background-color: #425844;
   grid-area: 1/1/-1/2;
