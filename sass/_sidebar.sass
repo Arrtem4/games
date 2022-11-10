@@ -1,0 +1,38 @@
+.sidebar
+    background-color: $color-green-dark
+    grid-area: 1 / 1 / -1 / 2
+    padding-top: 3.7rem
+    display: flex
+    justify-content: center
+    @include respond(m)
+        grid-area: 1 / 1 / 2 / -1
+        padding-top: 0rem
+        position: sticky
+        z-index: 20
+        top: 0
+        left: 0
+
+.hamburger
+    position: sticky
+    z-index: 20
+    top: 3.7rem
+    left: 0
+    @include respond(m)
+        position: fixed
+        top: 3rem
+        left: 50%
+        transform: translateX(-50%)
+    border: none
+    background-color: $color-gray-light
+    height: .2rem
+    width: 4.5rem
+    &::before, &::after
+        content: ""
+        background-color: $color-gray-light
+        height: .2rem
+        width: 4.5rem
+        display: block
+    &::before
+        transform: translateY(-1.6rem)
+    &::after
+        transform: translateY(1.3rem)

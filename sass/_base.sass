@@ -1,0 +1,55 @@
+$color-green-dark: #425844
+$color-green-light: #61A568
+
+$color-blue: #101D2C
+
+$color-gray-dark: #AAAAAA
+$color-gray-light: #F5F5F5
+
+.m-b-m
+    margin-bottom: 3rem
+    
+@mixin respond($breakpoint)
+    @if $breakpoint == s
+        @media only screen and (max-width: 570px)
+            @content
+    @if $breakpoint == m
+        @media only screen and (max-width: 860px)
+            @content
+    @if $breakpoint == l
+        @media only screen and (max-width: 1100px)
+            @content
+    @if $breakpoint == xl
+        @media only screen and (max-width: 1385px)
+            @content
+    
+*, ::after, ::before
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+html
+    font-size: 62.5%
+    @include respond(xl)
+        font-size: 56.25%
+    @include respond(l)
+        font-size: 43.75%
+    
+        
+body
+    font-family: "Montserrat", sans-serif
+    font-weight: 400
+    color: $color-gray-light
+    font-size: 1.6rem
+    background-color: $color-gray-light
+
+.container
+    display: grid
+    grid-template-rows: 75rem min-content 40vw repeat(3, min-content)
+    grid-template-columns: 6rem 1fr repeat(8, minmax(min-content, 14rem)) 1fr
+    @include respond(m)
+        grid-template-rows: 6rem 80rem repeat(7, min-content)
+        grid-template-columns: 1fr repeat(8, minmax(min-content, 14rem)) 1fr
+    @include respond(s)
+        grid-template-rows: 6rem 80rem repeat(8, min-content)
+        grid-template-columns: 1fr repeat(8, minmax(min-content, 14rem)) 1fr

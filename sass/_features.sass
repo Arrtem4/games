@@ -1,0 +1,11 @@
+.features
+    padding: 12rem 2rem
+    background-color: $color-gray-light
+    grid-area: 2 / 3 / 3 / 11
+    @include respond(m)
+        grid-area: 3 / 2 / 4 / 10
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr))
+    @include respond(m)
+        grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr))
+    gap: 3rem 3rem 

@@ -1,0 +1,42 @@
+.title-1
+    font-size: 4.5rem
+    font-weight: 700
+    color: white
+    @include respond(m)
+        text-align: center
+.title-2
+    font-size: 4rem
+    font-weight: 700
+    color: $color-gray-light
+    line-height: 100%
+    @include respond(s)
+    text-align: center
+.title-3
+    font-size: 1.9rem
+    font-weight: 700
+    color: $color-green-dark
+    &_white
+        color: white
+    &_green-light
+        color: $color-green-light
+.title-4
+    font-size: 1.4rem
+    font-weight: 300
+    color: $color-green-light
+
+.feature
+    display: grid
+    grid-template-columns: min-content 1fr
+    gap: 1.5rem 2.5rem
+    align-items: start
+    &__icon
+        height: 4.5rem
+        width: 4.5rem
+        grid-area: 1 / 1 / span 2 / 2
+        align-self: start
+    &__text
+        font-size: 1.6rem
+        font-weight: 400
+        color: $color-green-dark
+    &__title
+        padding: 1rem 0

@@ -1,0 +1,27 @@
+.gamers
+    background-color: $color-blue
+    grid-area: 1 / 9 / 2 / -1
+    @include respond(m)
+        grid-area: 4 / 7 / 5 / -1
+        padding: 2rem 4rem 2rem 2rem
+    @include respond(s)
+        grid-area: 5 / 1 / 6 / -1
+        padding: 5rem 2rem 5rem 2rem
+    display: grid
+    grid-template-columns: min-content max-content
+    gap: 4rem 2rem
+    align-content: center
+    justify-content: center
+    &__img
+        width: 7rem
+    &__title
+        grid-area: 1 / 1 / 2 / -1
+        color: $color-green-light
+        display: inline-block
+        justify-self: center
+    &__text
+        align-self: center
+    &__score
+        font-weight: 300
+        color: $color-gray-dark
+        font-size: 1.6rem
